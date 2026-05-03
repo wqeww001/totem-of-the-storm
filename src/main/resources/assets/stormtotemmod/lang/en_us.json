@@ -1,0 +1,11 @@
+{
+  "itemGroup.stormtotemmod": "Totem of the Storm",
+  "item.stormtotemmod.charged_copper_ingot": "Charged Copper Ingot",
+  "item.stormtotemmod.storm_dust": "Storm Dust",
+  "item.stormtotemmod.storm_flint": "Storm Flint",
+  "block.stormtotemmod.storm_block": "Storm Infused Block",
+  "block.stormtotemmod.storm_rod": "Storm Rod",
+  "message.stormtotemmod.invalid_structure": "Invalid structure! Need 2 Storm Blocks under the rod.",
+  "message.stormtotemmod.cooldown": "Totem is depleted. Wait for it to recharge...",
+  "effect.stormtotemmod.storm_charged": "Storm Charged"
+}

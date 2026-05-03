@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="All rights reserved"
+
+[[mods]]
+modId="stormtotemmod"
+version="${mod_version}"
+displayName="Totem of the Storm"
+logoFile="stormtotemmod.png"
+credits=""
+authors="hijinks001"
+description='''
+Build a Storm Totem to summon lightning, charge animals, and harvest the power of storms!
+
+Построй Грозовой тотем, призывай молнии, заряжай животных и собирай силу бурь!
+'''
+displayTest="MATCH_VERSION"
+
+[[dependencies.stormtotemmod]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.stormtotemmod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"

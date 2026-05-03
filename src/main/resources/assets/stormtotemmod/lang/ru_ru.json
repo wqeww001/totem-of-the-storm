@@ -1,0 +1,11 @@
+{
+  "itemGroup.stormtotemmod": "Totem of the Storm",
+  "item.stormtotemmod.charged_copper_ingot": "Заряженный медный слиток",
+  "item.stormtotemmod.storm_dust": "Пыльца бури",
+  "item.stormtotemmod.storm_flint": "Огниво бури",
+  "block.stormtotemmod.storm_block": "Грозовой блок",
+  "block.stormtotemmod.storm_rod": "Грозовой стержень",
+  "message.stormtotemmod.invalid_structure": "Неверная структура! Нужно 2 Грозовых блока под стержнем.",
+  "message.stormtotemmod.cooldown": "Тотем истощён. Ждите восстановления...",
+  "effect.stormtotemmod.storm_charged": "Заряжен бурей"
+}

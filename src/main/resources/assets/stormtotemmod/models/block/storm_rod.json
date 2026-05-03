@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/end_rod",
+  "textures": {
+    "end_rod": "stormtotemmod:block/storm_rod",
+    "particle": "stormtotemmod:block/storm_rod"
+  }
+}

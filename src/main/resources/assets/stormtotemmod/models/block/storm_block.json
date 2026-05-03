@@ -1,0 +1,24 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/cube_all",
+	"textures": {
+		"0": "stormtotemmod:block/storm_block",
+		"particle": "stormtotemmod:block/storm_block"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [4, 0, 8.25, 4.25], "texture": "#0"},
+				"east": {"uv": [4, 0, 8.25, 4.25], "texture": "#0"},
+				"south": {"uv": [4, 0, 8.25, 4.25], "texture": "#0"},
+				"west": {"uv": [4, 0, 8.25, 4.25], "texture": "#0"},
+				"up": {"uv": [4, 0, 8.25, 4.25], "texture": "#0"},
+				"down": {"uv": [4, 0, 8.25, 4.25], "texture": "#0"}
+			}
+		}
+	],
+	"display": {}
+}

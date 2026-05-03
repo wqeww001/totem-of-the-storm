@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DSD",
+    "SFS",
+    "DSD"
+  ],
+  "key": {
+    "D": {
+      "item": "stormtotemmod:storm_dust"
+    },
+    "S": {
+      "item": "stormtotemmod:charged_copper_ingot"
+    },
+    "F": {
+      "item": "minecraft:flint_and_steel"
+    }
+  },
+  "result": {
+    "item": "stormtotemmod:storm_flint",
+    "count": 1
+  }
+}
