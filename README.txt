@@ -2,16 +2,20 @@
 
 *Summon Lightning. Gain Power. Control the Storm.*
 
+<p align="center">
+  <a href="https://modrinth.com/mod/totem-of-the-storm"><img src="https://img.shields.io/badge/Modrinth-Download-00AF5C?style=for-the-badge&logo=modrinth" /></a>
+  <a href="https://github.com/wqeww001/totem-of-the-storm"><img src="https://img.shields.io/badge/GitHub-Source-181717?style=for-the-badge&logo=github" /></a>
+  <a href="https://github.com/wqeww001/totem-of-the-storm/stargazers"><img src="https://img.shields.io/github/stars/wqeww001/totem-of-the-storm?style=for-the-badge&labelColor=0d1117&color=ffd700" /></a>
+  <a href="https://github.com/wqeww001/totem-of-the-storm/issues"><img src="https://img.shields.io/github/issues/wqeww001/totem-of-the-storm?style=for-the-badge&labelColor=0d1117&color=ff6b6b" /></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Minecraft-1.20.1-62B47A?style=flat-square&logo=minecraft" />
+  <img src="https://img.shields.io/badge/Loader-Forge-D4A444?style=flat-square" />
+  <img src="https://img.shields.io/badge/Version-1.0.0-blue?style=flat-square" />
+</p>
+
 ---
-
-## 🔗 Links
-
-[![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?style=flat&logo=modrinth)](https://modrinth.com/mod/totem-of-the-storm)
-[![GitHub](https://img.shields.io/badge/GitHub-Source-181717?style=flat&logo=github)](https://github.com/wqeww001/totem-of-the-storm)
-
----
-
-## 📖 Description
 
 My first Minecraft mod for **Forge 1.20.1**. Adds a **Storm Totem** — a multi-block structure that harnesses the power of lightning.
 
