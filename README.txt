@@ -1,7 +1,9 @@
 # Totem of the Storm ⚡
 
-[![Modrinth](https://modrinth.com/mod/totem-of-the-storm)
+[![Modrinth](https://img.shields.io/badge/Modrinth-Download-green?logo=modrinth)](https://modrinth.com/mod/totem-of-the-storm)
 [![GitHub](https://img.shields.io/badge/GitHub-Source-black?logo=github)](https://github.com/wqeww001/totem-of-the-storm)
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue)]()
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-orange?logo=minecraft)]()
 
 My first Minecraft mod for Forge 1.20.1. Adds a Storm Totem — a structure that summons lightning and gives buffs.
 
