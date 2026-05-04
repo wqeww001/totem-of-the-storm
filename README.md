@@ -3,6 +3,7 @@
 *Summon Lightning. Gain Power. Control the Storm.*
 
 [![Modrinth](https://img.shields.io/badge/Modrinth-Download-00AF5C?style=for-the-badge&logo=modrinth)](https://modrinth.com/mod/totem-of-the-storm)
+[![CurseForge](https://img.shields.io/badge/CurseForge-Download-F16436?style=for-the-badge&logo=curseforge)](https://www.curseforge.com/minecraft/mc-mods/totem-of-the-storm)
 [![GitHub](https://img.shields.io/badge/GitHub-Source-181717?style=for-the-badge&logo=github)](https://github.com/wqeww001/totem-of-the-storm)
 [![Stars](https://img.shields.io/github/stars/wqeww001/totem-of-the-storm?style=for-the-badge&labelColor=0d1117&color=ffd700)](https://github.com/wqeww001/totem-of-the-storm/stargazers)
 
