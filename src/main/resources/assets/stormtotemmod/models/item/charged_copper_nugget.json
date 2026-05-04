@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "stormtotemmod:item/charged_copper_nugget"
+  }
+}

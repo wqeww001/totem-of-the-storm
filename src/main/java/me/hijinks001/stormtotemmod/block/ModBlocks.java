@@ -2,7 +2,6 @@ package me.hijinks001.stormtotemmod.block;
 
 import me.hijinks001.stormtotemmod.StormTotemMod;
 import me.hijinks001.stormtotemmod.item.ModItems;
-import me.hijinks001.stormtotemmod.block.StormRodBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -26,25 +25,33 @@ public class ModBlocks {
                     .mapColor(MapColor.METAL)
                     .strength(3f, 6f)
                     .sound(SoundType.METAL)
-                    .lightLevel(state -> 3) // слабое свечение
+                    .lightLevel(state -> 3)
             )
     );
 
     // Грозовой стержень
-// Стало:
-public static final RegistryObject<Block> STORM_ROD = registerBlock(
-        "storm_rod",
-        () -> new StormRodBlock(BlockBehaviour.Properties.of()
-                .mapColor(MapColor.METAL)
-                .strength(2f, 4f)
-                .sound(SoundType.METAL)
-                .lightLevel(state -> state.getValue(StormRodBlock.CHARGED) ? 7 : 2)
-                .noOcclusion()
-                .randomTicks() // нужно для таймера кулдауна
-        )
-);
+    public static final RegistryObject<Block> STORM_ROD = registerBlock(
+            "storm_rod",
+            () -> new StormRodBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.METAL)
+                    .strength(2f, 4f)
+                    .sound(SoundType.METAL)
+                    .lightLevel(state -> state.getValue(StormRodBlock.CHARGED) ? 7 : 2)
+                    .noOcclusion()
+            )
+    );
 
-    // Вспомогательный метод — регистрирует блок + BlockItem сразу
+    // Грозовая руда
+    public static final RegistryObject<Block> STORM_ORE = registerBlock(
+            "storm_ore",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE)
+                    .strength(1.5f, 3f)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()
+            )
+    );
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> registeredBlock = BLOCKS.register(name, block);
         ModItems.ITEMS.register(name,

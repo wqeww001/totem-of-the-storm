@@ -38,14 +38,27 @@ public class StormRodBlock extends Block {
         builder.add(CHARGED);
     }
 
+    // Редстоун-сигнал: 15 если заряжен, 0 если разряжен
+    @Override
+    public int getSignal(BlockState state, net.minecraft.world.level.BlockGetter level, BlockPos pos, net.minecraft.core.Direction direction) {
+        return state.getValue(CHARGED) ? 15 : 0;
+    }
+
+    @Override
+    public boolean isSignalSource(BlockState state) {
+        return true;
+    }
+
     @Override
     public InteractionResult use(BlockState state, Level level, BlockPos pos,
                                   Player player, InteractionHand hand, BlockHitResult hit) {
 
         ItemStack heldItem = player.getItemInHand(hand);
 
+        // Проверка: в руке Огниво бури + стержень заряжен
         if (heldItem.is(ModItems.STORM_FLINT.get()) && state.getValue(CHARGED)) {
 
+            // Проверка структуры
             if (!isValidStructure(level, pos)) {
                 if (!level.isClientSide) {
                     player.displayClientMessage(
@@ -59,16 +72,26 @@ public class StormRodBlock extends Block {
             if (!level.isClientSide) {
                 ServerLevel serverLevel = (ServerLevel) level;
 
-                heldItem.hurtAndBreak(1, player, (p) -> p.broadcastBreakEvent(hand));
+                // Ломаем зажигалку (исправлено!)
+                heldItem.setCount(0);
 
+                // Звук грома
                 level.playSound(null, pos, SoundEvents.LIGHTNING_BOLT_THUNDER,
                         SoundSource.BLOCKS, 1.5f, 1.0f);
 
+                // Визуал молнии
                 spawnFakeLightning(serverLevel, pos);
-                applyPlayerEffects(player);
-                chargeAnimals(serverLevel, pos);
-                boostCrops(serverLevel, pos);
 
+                // Проверка улучшенной структуры (медные блоки по углам)
+                int radius = isEnhancedStructure(level, pos) ?
+                        (int)(Config.totemEffectRadius * 1.5) : Config.totemEffectRadius;
+
+                // Эффекты
+                applyPlayerEffects(player);
+                chargeAnimals(serverLevel, pos, radius);
+                boostCrops(serverLevel, pos, radius);
+
+                // Кулдаун
                 level.setBlock(pos, state.setValue(CHARGED, false), 3);
                 level.scheduleTick(pos, this, Config.totemCooldownSeconds * 20);
             }
@@ -76,19 +99,42 @@ public class StormRodBlock extends Block {
             return InteractionResult.sidedSuccess(level.isClientSide);
         }
 
+        // Если стержень разряжен — показать оставшееся время
         if (!state.getValue(CHARGED) && !level.isClientSide) {
-            player.displayClientMessage(
-                    net.minecraft.network.chat.Component.literal("§7Тотем истощён. Ждите восстановления..."),
-                    true
-            );
+            int seconds = getCooldownSeconds(level, pos);
+            if (seconds > 0) {
+                int mins = seconds / 60;
+                int secs = seconds % 60;
+                player.displayClientMessage(
+                        net.minecraft.network.chat.Component.literal(
+                                String.format("§7Тотем истощён. Восстановится через §b%d:%02d", mins, secs)
+                        ), true
+                );
+            }
         }
 
         return InteractionResult.PASS;
     }
 
+    // Проверка базовой структуры
     private boolean isValidStructure(Level level, BlockPos pos) {
         return level.getBlockState(pos.below()).is(ModBlocks.STORM_BLOCK.get()) &&
                level.getBlockState(pos.below(2)).is(ModBlocks.STORM_BLOCK.get());
+    }
+
+    // Проверка улучшенной структуры (4 медных блока по углам)
+    private boolean isEnhancedStructure(Level level, BlockPos pos) {
+        BlockPos base = pos.below(2); // нижний грозовой блок
+        return level.getBlockState(base.offset(-1, 0, -1)).is(net.minecraft.world.level.block.Blocks.COPPER_BLOCK) &&
+               level.getBlockState(base.offset(1, 0, -1)).is(net.minecraft.world.level.block.Blocks.COPPER_BLOCK) &&
+               level.getBlockState(base.offset(-1, 0, 1)).is(net.minecraft.world.level.block.Blocks.COPPER_BLOCK) &&
+               level.getBlockState(base.offset(1, 0, 1)).is(net.minecraft.world.level.block.Blocks.COPPER_BLOCK);
+    }
+
+    // Оставшееся время кулдауна
+    private int getCooldownSeconds(Level level, BlockPos pos) {
+        // Упрощённо: берём из конфига, клиент не знает точного времени тика
+        return Config.totemCooldownSeconds;
     }
 
     private void spawnFakeLightning(ServerLevel level, BlockPos pos) {
@@ -115,8 +161,7 @@ public class StormRodBlock extends Block {
         player.addEffect(new MobEffectInstance(MobEffects.JUMP, duration, 1, false, true));
     }
 
-    private void chargeAnimals(ServerLevel level, BlockPos pos) {
-        int radius = Config.totemEffectRadius;
+    private void chargeAnimals(ServerLevel level, BlockPos pos, int radius) {
         AABB area = new AABB(pos).inflate(radius);
 
         List<Animal> animals = level.getEntitiesOfClass(Animal.class, area,
@@ -137,9 +182,7 @@ public class StormRodBlock extends Block {
         }
     }
 
-    private void boostCrops(ServerLevel level, BlockPos pos) {
-        int radius = Config.totemEffectRadius;
-
+    private void boostCrops(ServerLevel level, BlockPos pos, int radius) {
         BlockPos.betweenClosedStream(
                 pos.offset(-radius, -3, -radius),
                 pos.offset(radius, 3, radius)
@@ -165,7 +208,7 @@ public class StormRodBlock extends Block {
 
             level.sendParticles(ParticleTypes.ELECTRIC_SPARK,
                     pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5,
-                    20, 0.3, 0.3, 0.3, 0.05);
+                    30, 0.4, 0.4, 0.4, 0.05);
         }
     }
 }

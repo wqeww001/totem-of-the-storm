@@ -20,10 +20,13 @@ public class ModCreativeTab {
                     .icon(() -> new ItemStack(ModItems.CHARGED_COPPER_INGOT.get()))
                     .displayItems((params, output) -> {
                         output.accept(ModItems.CHARGED_COPPER_INGOT.get());
+                        output.accept(ModItems.CHARGED_COPPER_NUGGET.get());
                         output.accept(ModItems.STORM_DUST.get());
                         output.accept(ModItems.STORM_FLINT.get());
+                        output.accept(ModItems.STORM_WAND.get());
                         output.accept(ModBlocks.STORM_BLOCK.get());
                         output.accept(ModBlocks.STORM_ROD.get());
+                        output.accept(ModBlocks.STORM_ORE.get());
                     })
                     .build()
     );

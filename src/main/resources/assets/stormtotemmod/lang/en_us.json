@@ -7,5 +7,8 @@
   "block.stormtotemmod.storm_rod": "Storm Rod",
   "message.stormtotemmod.invalid_structure": "Invalid structure! Need 2 Storm Blocks under the rod.",
   "message.stormtotemmod.cooldown": "Totem is depleted. Wait for it to recharge...",
-  "effect.stormtotemmod.storm_charged": "Storm Charged"
+  "effect.stormtotemmod.storm_charged": "Storm Charged",
+  "item.stormtotemmod.charged_copper_nugget": "Charged Copper Nugget",
+  "item.stormtotemmod.storm_wand": "Storm Wand",
+  "block.stormtotemmod.storm_ore": "Storm Ore"
 }

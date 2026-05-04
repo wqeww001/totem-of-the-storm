@@ -7,5 +7,8 @@
   "block.stormtotemmod.storm_rod": "Грозовой стержень",
   "message.stormtotemmod.invalid_structure": "Неверная структура! Нужно 2 Грозовых блока под стержнем.",
   "message.stormtotemmod.cooldown": "Тотем истощён. Ждите восстановления...",
-  "effect.stormtotemmod.storm_charged": "Заряжен бурей"
+  "effect.stormtotemmod.storm_charged": "Заряжен бурей",
+  "item.stormtotemmod.charged_copper_nugget": "Заряженный медный самородок",
+  "item.stormtotemmod.storm_wand": "Грозовой жезл",
+  "block.stormtotemmod.storm_ore": "Грозовая руда"
 }

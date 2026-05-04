@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  D",
+    " S ",
+    "S  "
+  ],
+  "key": {
+    "D": {
+      "item": "stormtotemmod:storm_dust"
+    },
+    "S": {
+      "item": "stormtotemmod:charged_copper_ingot"
+    }
+  },
+  "result": {
+    "item": "stormtotemmod:storm_wand",
+    "count": 1
+  }
+}
