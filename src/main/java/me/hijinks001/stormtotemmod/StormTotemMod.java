@@ -1,6 +1,7 @@
 package me.hijinks001.stormtotemmod;
 
 import me.hijinks001.stormtotemmod.block.ModBlocks;
+import me.hijinks001.stormtotemmod.effect.ModEffects;
 import me.hijinks001.stormtotemmod.item.ModCreativeTab;
 import me.hijinks001.stormtotemmod.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
@@ -18,6 +19,7 @@ public class StormTotemMod {
 
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
+        ModEffects.EFFECTS.register(modEventBus);
         ModCreativeTab.CREATIVE_TABS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);

@@ -1,0 +1,10 @@
+{
+  "type": "jei:information",
+  "items": [
+    "stormtotemmod:storm_ore"
+  ],
+  "information": [
+    "Smelt in furnace: stormtotemmod:charged_copper_ingot",
+    "Плавка в печи: stormtotemmod:charged_copper_ingot"
+  ]
+}

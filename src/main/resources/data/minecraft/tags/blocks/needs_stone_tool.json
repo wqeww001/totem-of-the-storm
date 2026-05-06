@@ -2,6 +2,7 @@
   "values": [
     "stormtotemmod:storm_ore",
     "stormtotemmod:storm_block",
-    "stormtotemmod:storm_rod"
+    "stormtotemmod:storm_rod",
+    "stormtotemmod:storm_crystal_ore"
   ]
 }

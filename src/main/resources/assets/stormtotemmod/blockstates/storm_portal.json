@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "stormtotemmod:block/storm_portal_ns"
+    },
+    "axis=z": {
+      "model": "stormtotemmod:block/storm_portal_ew"
+    }
+  }
+}

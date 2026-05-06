@@ -1,0 +1,46 @@
+{
+  "name": "storm_wisp.geo.json",
+  "type": "geo",
+  "scale": 1,
+  "pivot": [0, 1, 0],
+  "version": 0,
+  "models": [
+    {
+      "name": "wisp",
+      "type": "box",
+      "scale": [1, 16 / 64, 1],
+      "pivot": [1 / 2, 8, 1 / 2],
+      "position": [0, 4, 0],
+      "color": [0, 0, 1, 1],
+      "children": [
+        {
+          "type": "box",
+          "scale": [1, 16 / 64, 1],
+          "pivot": [1 / 2, 12, 1 / 2],
+          "position": [0, 10, 0],
+          "color": [0, 0, 1, 1],
+          "children": [
+            {
+              "type": "box",
+              "name": "spike",
+              "scale": [1, 4 / 64, 1],
+              "pivot": [1 / 2, 13, 1 / 2],
+              "position": [-5, 11, 0],
+              "color": [0, 0, 1, 1]
+            },
+            {
+              "type": "box",
+              "name": "spike",
+              "scale": [1, 4 / 64, 1],
+              "pivot": [1 / 2, 13, 1 / 2],
+              "position": [3, 11, 0],
+              "color": [0, 0, 1, 1]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "texture": {},
+  "texture_size": [64, 32]
+}

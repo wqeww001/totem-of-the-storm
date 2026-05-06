@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "CRC",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "item": "stormtotemmod:charged_copper_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "stormtotemmod:storm_compass",
+    "count": 1
+  }
+}

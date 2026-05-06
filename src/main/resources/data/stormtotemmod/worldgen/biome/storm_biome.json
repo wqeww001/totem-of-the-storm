@@ -1,0 +1,45 @@
+{
+  "temperature": 0.5,
+  "downfall": 0.5,
+  "has_precipitation": false,
+  "effects": {
+    "sky_color": 1704131,
+    "fog_color": 3342438,
+    "water_color": 6684876,
+    "water_fog_color": 3342489,
+    "grass_color": 3342660,
+    "foliage_color": 4456806,
+    "ambient_sound": {
+      "sound_id": "minecraft:ambient.cave"
+    },
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    }
+  },
+  "spawners": {
+      "monster": [],
+      "creature": [],
+      "ambient": [],
+      "water_creature": [],
+      "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "stormtotemmod:storm_crystal_ore"
+    ],
+    [],
+    [],
+    []
+  ]
+}

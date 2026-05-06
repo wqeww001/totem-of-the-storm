@@ -1,0 +1,11 @@
+{
+  "type": "stormtotemmod:storm_dimension",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "minecraft:floating_islands",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "stormtotemmod:storm_biome"
+    }
+  }
+}

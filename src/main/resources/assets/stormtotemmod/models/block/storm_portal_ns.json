@@ -1,0 +1,25 @@
+{
+  "textures": {
+    "particle": "stormtotemmod:block/storm_portal",
+    "portal": "stormtotemmod:block/storm_portal"
+  },
+  "elements": [
+    {
+      "name": "portal",
+      "from": [0, 0, 6.4],
+      "to": [16, 16, 9.6],
+      "faces": {
+        "north": {
+          "uv": [0, 0, 16, 16],
+          "texture": "#portal",
+          "tintindex": 0
+        },
+        "south": {
+          "uv": [0, 0, 16, 16],
+          "texture": "#portal",
+          "tintindex": 0
+        }
+      }
+    }
+  ]
+}
