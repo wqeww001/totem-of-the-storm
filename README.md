@@ -9,11 +9,11 @@
 
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62B47A?style=flat-square&logo=minecraft)
 ![Forge](https://img.shields.io/badge/Loader-Forge-D4A444?style=flat-square)
-![Version](https://img.shields.io/badge/Version-1.2.0-blue?style=flat-square)
+![Version](https://img.shields.io/badge/Version-2.0.0-blue?style=flat-square)
 
 ---
 
-My first Minecraft mod for **Forge 1.20.1**. Adds a **Storm Totem**, **Storm Wand**, and **Storm Ore**!
+My first Minecraft mod for **Forge 1.20.1**. Adds a **Storm Totem**, **Storm Dimension**, and **Storm Crystal**!
 
 > I'm still learning. Code may be messy, textures are not perfect. Be kind 🙏
 
@@ -22,16 +22,25 @@ My first Minecraft mod for **Forge 1.20.1**. Adds a **Storm Totem**, **Storm Wan
 ## ⚡ Features
 
 - 🏗️ Build a **Storm Totem** (2 Storm Blocks + 1 Storm Rod)
+- 🚪 Build a **Storm Portal** and enter the **Storm Dimension**
+- 🌍 Storm Dimension — floating islands, purple sky, eternal night
+- 💎 **Storm Crystal Ore** — found only in Storm Dimension
+- 💎 **Storm Crystal** — new resource (1-3 from ore, Fortune works)
 - 🪄 **Storm Wand** — ranged lightning weapon (5 charges, 15 blocks)
-- ⛏️ **Storm Ore** — generates underground, drops Charged Copper Nuggets
+- ⛏️ **Storm Ore** — generates in Overworld, drops Charged Copper Nuggets
 - 🔥 Smelt Nuggets → Charged Copper Ingots
 - ⚡ Activate totem with Storm Flint
-- 🏃 **Storm Rush** buff (Speed III + Jump Boost II)
+- 🏃 **Storm Rush** buff (Speed III + Jump Boost II) with particle trail
+- 🛡️ **Storm Shield** — 5s invincibility on totem activation
 - 🌾 Crops grow instantly in radius
 - 🐄 Animals glow and drop experience
 - 📶 Redstone signal from Storm Rod
-- ⏳ Configurable cooldown
+- ⏳ Configurable cooldown with time remaining message
 - 🔧 Enhanced structure (add copper blocks for +50% radius)
+- 📖 **Storm Guide Book** — in-game guide with GUI
+- 🧭 **Storm Compass** — check weather
+- 💬 **Tooltips** on all items
+- 🎁 **Starter Kit** — book + compass on first login
 
 ---
 
@@ -46,11 +55,29 @@ My first Minecraft mod for **Forge 1.20.1**. Adds a **Storm Totem**, **Storm Wan
 | Storm Dust | Glowstone Dust + Redstone + Gunpowder |
 | Storm Flint | Storm Dust + Charged Ingot + Flint & Steel |
 | Storm Wand | 2 Charged Ingots + Storm Dust |
+| Storm Compass | 4 Charged Ingots + Redstone |
+| Storm Guide Book | Book + Storm Dust |
+| Storm Portal | 4x5 frame of Storm Blocks, light with Storm Flint |
+
+---
+
+## 🌍 Storm Dimension
+
+- Build a Nether-like portal (4x5 Storm Blocks)
+- Light it with Storm Flint
+- Enter to discover floating islands with Storm Crystal Ore
+- Return portal spawns nearby automatically
 
 ---
 
 ## 🔄 Gameplay Loop
-Mine Storm Ore → Nuggets → Furnace → Ingots → Craft Totem → Activate → Profit!
+Overworld: Mine Storm Ore → Nuggets → Furnace → Ingots → Craft Totem
+↓
+Activate Totem → Buffs + Crop Growth + Animal XP
+↓
+Craft Portal → Enter Storm Dimension → Mine Storm Crystal
+
+text
 
 ---
 
@@ -60,7 +87,7 @@ Located in `config/stormtotemmod-common.toml`:
 - `totemCooldownSeconds` (default: 300)
 - `totemEffectRadius` (default: 20)
 - `stormRushDuration` (default: 12)
-- `chargedAnimalsDropDust` (default: true)
+- `giveStarterKit` (default: true)
 
 ---
 
